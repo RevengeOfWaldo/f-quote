@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Encouragement</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #add8e6, #ffffff);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #333;
+            text-align: center;
+        }
+
+        #encouragement-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #encouragement {
+            font-size: 24px;
+            color: #333;
+        }
+
+        #encouragement-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #encouragement-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Random Encouragement</h1>
+    <div id="encouragement-container">
+        <p id="encouragement">Click the button for a random encouragement!</p>
+        <button id="encouragement-button">Random Encouragement</button>
+    </div>
+    <script>
+        const encouragements = [
+            "You're doing great!",
+            "Keep pushing forward!",
+            "Believe in yourself!",
+            "You are capable of amazing things!",
+            "Stay positive and keep moving!",
+            "Your hard work is paying off!",
+            "Keep up the great work!",
+            "You can do it!",
+            "Stay strong and keep going!",
+            "You are incredible!"
+        ];
+
+        document.getElementById("encouragement-button").addEventListener("click", function() {
+            const randomIndex = Math.floor(Math.random() * encouragements.length);
+            const randomEncouragement = encouragements[randomIndex];
+            document.getElementById("encouragement").textContent = randomEncouragement;
+        });
+    </script>
+</body>
+</html>
