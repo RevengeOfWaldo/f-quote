@@ -3,43 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Quote</title>
+    <title>F-Quote</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-           background: linear-gradient(135deg, #add8e6, #ffffff);
+            background: linear-gradient(135deg, #add8e6, #ffffff);
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
+            padding: 0 20px; /* Add padding to avoid content touching the edges */
         }
 
-        p{
-            font-size: 15px;
-            justify-content: center; 
-            align-items: center;
-            padding-bottom: 10%;
-            padding-left: 25%;
-            padding-right: 25%;
-            
-        }
         h1 {
-            font-size: 50pt;
+            font-size: 8vw; /* Use viewport width for a responsive font size */
             color: #333;
+            text-align: center; /* Center the title text */
         }
 
         #quote-container {
-            background-color: transparent;
+            background-color: rgba(255, 255, 255, 0.8); /* Light transparent background */
             padding: 20px;
-            border-radius: 5px;
-            max-width: 600px;
+            border-radius: 10px;
+            max-width: 100%; /* Ensure the container is responsive */
+            width: 600px;
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
         }
 
         #quote {
-            font-size: 35px;
+            font-size: 5vw; /* Use viewport width for a responsive font size */
             color: #333;
             opacity: 0;
             animation: fadeIn 5s forwards;
@@ -50,6 +45,16 @@
                 opacity: 1;
             }
         }
+
+        /* Media Query for larger screens */
+        @media (min-width: 600px) {
+            h1 {
+                font-size: 4vw; /* Adjust title font size for larger screens */
+            }
+            #quote {
+                font-size: 2.5vw; /* Adjust quote font size for larger screens */
+            }
+        }
     </style>
 </head>
 <body>
@@ -57,8 +62,6 @@
     <div id="quote-container">
         <p id="quote"></p>
     </div>
-
-    <P> This is just an attempt to make my life currently less boring, I am currently walking through a daze of the same exact time daily on a military deployment. Its numbs your senses, and your happiness. This is an attempt to have some fun and try to learn some things. -Jesse Filippelli </P>
     <script>
         const quotes = {
             "03-01": "The start of a new month is the opportunity to try something new.",
