@@ -5,83 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Quote</title>
     <style>
-body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #b12227 0%, #ffffff 99%, #707070 100%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-h1 {
-    font-size: 50pt;
-    color: #333;
-    z-position:-1;
-    
-}
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #b12227 0%, #ffffff 99%, #707070 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
-#quote-container {
-    background-color: transparent;
-    padding: 20px;
-    border-radius: 5px;
-    max-width: 600px;
-    text-align: center;
-}
+        h1 {
+            font-size: 50pt;
+            color: #333;
+        }
 
-#quote {
-    font-size: 35px;
-    color: #333;
-    opacity: 0;
-     animation: fadeIn 5s forwards;
-}
+        #quote-container {
+            background-color: transparent;
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 600px;
+            text-align: center;
+        }
 
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
-}
+        #quote {
+            font-size: 35px;
+            color: #333;
+            opacity: 0;
+            animation: fadeIn 5s forwards;
+        }
 
-        
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 <body>
     <h1>F-Quotes</h1>
     <div id="quote-container">
-    <p id="quote"></p>
-
+        <p id="quote"></p>
     </div>
     <script>
-const quotes = {
-    "03-01": "The start of a new month is the opportunity to try something new.",
-    "03-02": "Kick ass and take names, and burn those names into your memory of people who want you to fail. Use that as motivation to keep going.",
-    "03-03": "Life is so short, so take advantage of everything that is given.",
-    "03-04": "Enemies want you to fail, so laugh in their face while you win.",
-    "03-05": "Stay strong and ignore the negativity.",
-    "03-06": "Overcome obstacles with determination.",
-    "03-07": "Embrace your inner strength.",
-    "03-08": "What is the meaning of life? Tacos? ... Close enough.",
-    "03-09": "Blah.",
-    "03-10": "Remember the good times, then the bad times surround you.",
-    "03-11": "I'm a dinosaur, like a cool one.... like a badassasurus.",
-    "03-12": "Game Of Thrones had a mid ending... but the battle of the bastards....was a masterpiece.",
-    "03-13": "Enter changes.",
-    // Add more quotes here...
-};
+        const quotes = {
+            "03-01": "The start of a new month is the opportunity to try something new.",
+            "03-02": "Kick ass and take names, and burn those names into your memory of people who want you to fail. Use that as motivation to keep going.",
+            "03-03": "Life is so short, so take advantage of everything that is given.",
+            "03-04": "Enemies want you to fail, so laugh in their face while you win.",
+            "03-05": "Stay strong and ignore the negativity.",
+            "03-06": "Overcome obstacles with determination.",
+            "03-07": "Embrace your inner strength.",
+            "03-08": "What is the meaning of life? Tacos? ... Close enough.",
+            "03-09": "Blah.",
+            "03-10": "Remember the good times, then the bad times surround you.",
+            "03-11": "I'm a dinosaur, like a cool one.... like a badassasurus.",
+            "03-12": "Game Of Thrones had a mid ending... but the battle of the bastards....was a masterpiece.",
+            // Add more quotes here...
+        };
 
-function displayQuote() {
-    const today = new Date();
-    const month = String(today.getMonth() + 1).padStart(2, '0');
-    const day = String(today.getDate()).padStart(2, '0');
-    const key = `${month}-${day}`;
-    const quote = quotes[key] || "Stay positive, work hard, make it happen.";
-    document.getElementById("quote").textContent = quote;
-}
+        function displayQuote() {
+            const today = new Date();
+            const month = String(today.getMonth() + 1).padStart(2, '0');
+            const day = String(today.getDate()).padStart(2, '0');
+            const key = `${month}-${day}`;
+            const quote = quotes[key] || "Stay positive, work hard, make it happen.";
+            document.getElementById("quote").textContent = quote;
+        }
 
-displayQuote();
-
-/* Place your JavaScript in this file */       
+        displayQuote();
     </script>
 </body>
 </html>
