@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>F-Quote</title>
+    <title>Daily Quote</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,15 +12,16 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
             margin: 0;
-            padding: 0 20px; /* Add padding to avoid content touching the edges */
+            padding: 20px; /* Add padding to avoid content touching the edges */
         }
 
         h1 {
             font-size: 8vw; /* Use viewport width for a responsive font size */
             color: #333;
             text-align: center; /* Center the title text */
+            margin: 0 0 20px; /* Add margin at the bottom */
         }
 
         #quote-container {
@@ -38,6 +39,7 @@
             color: #333;
             opacity: 0;
             animation: fadeIn 5s forwards;
+            margin: 0;
         }
 
         @keyframes fadeIn {
@@ -55,12 +57,23 @@
                 font-size: 2.5vw; /* Adjust quote font size for larger screens */
             }
         }
+
+        /* Style for the footer text */
+        #footer {
+            font-size: 12px;
+            color: #666;
+            text-align: center;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
     <h1>F-Quotes</h1>
     <div id="quote-container">
         <p id="quote"></p>
+    </div>
+    <div id="footer">
+        this is a fun project because I'm in a numb place physically and mentally on this deployment. -Jesse Filippelli AKA that idiot who joined the Air Force
     </div>
     <script>
         const quotes = {
